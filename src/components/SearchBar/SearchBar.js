@@ -8,6 +8,16 @@ const searchByOptions = {
 };
 
 class SearchBar extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state={
+            term: '',
+            location: '',
+            sortBy: 'best match'
+        }
+    }
+
     renderSortByOptions() {
         const keys = Object.keys(searchByOptions); //fournit les keys correspond à l'objet searchByOptions (string)
         return keys.map(sortByOption => {
